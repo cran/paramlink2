@@ -1,7 +1,7 @@
 Package: paramlink2
 Type: Package
 Title: Parametric Linkage Analysis
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: person("Magnus Dehli", "Vigeland", 
                   email = "m.d.vigeland@medisin.uio.no", 
                   role = c("aut", "cre"),
@@ -22,12 +22,15 @@ LazyData: true
 Depends: R (>= 3.5), pedtools
 Imports: pedprobr
 Suggests: spelling, testthat
+SystemRequirements: MERLIN
+        (http://csg.sph.umich.edu/abecasis/merlin/index.html) for
+        multipoint linkage analysis.
 RoxygenNote: 7.1.1
 BugReports: https://github.com/magnusdv/paramlink2/issues
 NeedsCompilation: no
-Packaged: 2021-05-03 09:20:42 UTC; magnusdv
+Packaged: 2021-05-04 19:37:10 UTC; magnusdv
 Author: Magnus Dehli Vigeland [aut, cre]
     (<https://orcid.org/0000-0002-9134-4962>)
 Maintainer: Magnus Dehli Vigeland <m.d.vigeland@medisin.uio.no>
 Repository: CRAN
-Date/Publication: 2021-05-04 06:30:09 UTC
+Date/Publication: 2021-05-04 21:50:06 UTC

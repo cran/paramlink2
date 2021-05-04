@@ -1,11 +1,11 @@
-6948c5b879ca80a6214640a31fb17140 *DESCRIPTION
-830bdfef213fd5e2501fc14219020acb *NAMESPACE
-82401db1d4f4bdbb311b7f04a6f361ba *NEWS.md
+a8cb6facf88e2bf2248a4822baaece45 *DESCRIPTION
+18fe6a1d6007e7bdfe3c0f858a6407b7 *NAMESPACE
+d4cd5c50054f0b462a2386067785b2f0 *NEWS.md
 12c72f33b2edcf1f6da3d54c8d73ab7c *R/data.R
 46ac82f3290d7214a1e0a2449376de8f *R/diseaseModel.R
 c53b8b3212267215884d1714415d81b3 *R/linkres.R
 2f6552a6836ee9b54af40a1f0f89fc32 *R/lod.R
-9a0aa3bf4a0d4ea11a69a1c965ee1cd0 *R/merlinLod.R
+a240cc3d5261d5e25311b56a1dc48030 *R/merlinLod.R
 c23e17e471291afbfcc2a25bf843881c *R/paramlink2-package.R
 4bf6db68cc8698953c7a15344e36024a *R/peak_utils.R
 896930a0effde459b386c06660410f10 *R/peel.R
@@ -13,7 +13,7 @@ dd1948f0e41eba6f35278b6cad7ebc2d *R/startdata_MD.R
 c0451ae9ad0296f7bddb5c22659a66bf *R/utils.R
 6f81bd15aa28b8788034fd75b612f84e *R/writeMerlin.R
 8c3c7a281df0e2e5b63cbda03353e100 *README.md
-bf88d405884875aabc7b35147931e5ec *build/partial.rdb
+66dd1ba17751410b2bffe5b4071d8595 *build/partial.rdb
 955adaac97dd77dd5f94ff313b0f18a3 *data/dominant1.rda
 84cd7d6035fc704151c89df993125938 *inst/WORDLIST
 9dca48faf0373c4406962de9707b4988 *man/diseaseModel.Rd
@@ -25,7 +25,7 @@ d0a1724ee6478d82f652f6c0dd10d46c *man/figures/README-dominant1Ped-1.png
 a7b51b93598bce8ea75897f3a020c165 *man/linkres.Rd
 cdb1e983a3fdea3f8c214c23c787a882 *man/lod.Rd
 0164bffaa0080e5dfa657e738e70c108 *man/lodPeaks.Rd
-c98b7974075cd6f5cd0689ab96938863 *man/merlinLod.Rd
+2be912108cbe30ed50e566af91af0584 *man/merlinLod.Rd
 eafa2c7551565b4744be51d889b09d79 *man/paramlink2.Rd
 332173f20d20942c02019350ea4dcadc *tests/spelling.R
 7d72143ebbac0d3cb64e6b40d05701f5 *tests/testthat.R
