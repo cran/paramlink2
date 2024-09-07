@@ -1,7 +1,7 @@
 Type: Package
 Package: paramlink2
 Title: Parametric Linkage Analysis
-Version: 1.0.4
+Version: 1.0.6
 Authors@R: 
     person("Magnus Dehli", "Vigeland", , "m.d.vigeland@medisin.uio.no", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-9134-4962"))
@@ -11,7 +11,7 @@ Description: Parametric linkage analysis of monogenic traits in medical
     visualisation of log of the odds (LOD) scores and summaries of linkage
     peaks. Disease models may be specified to accommodate phenocopies,
     reduced penetrance and liability classes. 'paramlink2' is part of the
-    'ped suite' package ecosystem, presented in 'Pedigree Analysis in R'
+    'pedsuite' package ecosystem, presented in 'Pedigree Analysis in R'
     (Vigeland, 2021, ISBN:9780128244302).
 License: GPL-3
 URL: https://github.com/magnusdv/paramlink2
@@ -22,13 +22,13 @@ Suggests: spelling, testthat
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 SystemRequirements: MERLIN (https://csg.sph.umich.edu/abecasis/merlin/)
         for multipoint linkage analysis.
 NeedsCompilation: no
-Packaged: 2023-02-11 09:46:07 UTC; magnusdv
+Packaged: 2024-09-07 13:29:02 UTC; magnu
 Author: Magnus Dehli Vigeland [aut, cre]
     (<https://orcid.org/0000-0002-9134-4962>)
 Maintainer: Magnus Dehli Vigeland <m.d.vigeland@medisin.uio.no>
 Repository: CRAN
-Date/Publication: 2023-02-11 10:10:05 UTC
+Date/Publication: 2024-09-07 13:50:02 UTC
