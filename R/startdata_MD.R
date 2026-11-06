@@ -21,7 +21,7 @@ startdata_MD_AUT = function(x, m, affcode, model, liability, eliminate = 1) {
 
   ### Penetrances & liability
   penetMat = model$penetrances
-  if(!is.matrix(penetMat) && ncol(penetMat) == 3)
+  if(!is.matrix(penetMat) || ncol(penetMat) != 3)
     stop2("The `penetrances` model is not a matrix with 3 columns")
 
   if(!all(liability %in% 1:nrow(penetMat)))
@@ -56,10 +56,8 @@ startdata_MD_AUT = function(x, m, affcode, model, liability, eliminate = 1) {
     g$prob = prob
 
     keep = prob > 0
-    if (!any(keep)) {
-      impossible = TRUE
+    if (!any(keep))
       return(NULL)
-    }
 
     if(!all(keep))
       g[] = lapply(g, function(vec) vec[keep])
@@ -67,7 +65,7 @@ startdata_MD_AUT = function(x, m, affcode, model, liability, eliminate = 1) {
     g
   })
 
-  attr(dat, "impossible") = impossible
+  attr(dat, "impossible") = any(lengths(dat) == 0L)
   dat
 }
 

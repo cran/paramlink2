@@ -11,12 +11,18 @@ export(lodPeaks)
 export(merlinLod)
 export(peakSummary)
 import(pedtools)
-importFrom(graphics,abline)
-importFrom(graphics,axis)
-importFrom(graphics,par)
-importFrom(graphics,points)
-importFrom(pedprobr,checkMerlin)
-importFrom(pedprobr,likelihood)
-importFrom(pedprobr,merlin)
-importFrom(utils,read.table)
-importFrom(utils,write.table)
+importFrom(graphics,
+  abline,
+  axis,
+  par,
+  points
+)
+importFrom(pedprobr,
+  checkMerlin,
+  likelihood,
+  merlin
+)
+importFrom(utils,
+  read.table,
+  write.table
+)

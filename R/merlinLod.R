@@ -73,11 +73,6 @@ merlinLod = function(x, aff, model, map = NULL, markers = NULL,
                      maxOnly = NA, options = "", dir = tempdir(),
                      cleanup = TRUE, verbose = FALSE, ...) {
 
-  if(!pedprobr::checkMerlin()) {
-    message("MERLIN executible not found. Please consult the documentation.")
-    return()
-  }
-
   # Allow longer warning messages (from MERLIN)
   old = options()
   on.exit(options(old))
@@ -111,7 +106,7 @@ merlinLod = function(x, aff, model, map = NULL, markers = NULL,
   merlinfiles = .writeMerlin(x, aff, model = model, liability = liability,
                              map = map, prefix = prefix, verbose = verbose)
 
-  options = sprintf("--model %s.model --tabulate --markerNames --quiet", prefix)
+  options = paste(sprintf("--model %s.model --tabulate --markerNames --quiet", prefix), options)
 
   # Singlepoint analysis
   if(singlepoint && rho > 0) {

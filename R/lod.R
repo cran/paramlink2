@@ -85,20 +85,28 @@ lod = function(x, aff, model, rho = 0, liability = NULL, markers = NULL, maxOnly
   if(is.na(maxOnly))
     maxOnly = nMarkers(x) == 1
 
-  if(hasUnbrokenLoops(x)) {
-    x = breakLoops(x, loopBreakers = loopBreakers, verbose = verbose)
-    markers = x$MARKERS
-  }
-
-  # Convert aff into vector of 0-1-2 status
+  # Affection status and liability vectors
   aff = fixAff(x, aff, verbose = verbose)
+  liability = liability %||% rep.int(1L, pedsize(x))
+  if(length(liability) != pedsize(x))
+    stop2("Argument `liability` must have length ", pedsize(x))
 
-  # Liability classes
-  liability = liability %||% rep(1, pedsize(x))
+  # Break loops if necessary
+  if(hasUnbrokenLoops(x)) {
+    ids = x$ID
+    x = breakLoops(x, loopBreakers = loopBreakers, verbose = verbose,
+                  allowFounder = TRUE, allowRepeated = TRUE)
+
+    # Map every copy to its original, preserving the new pedigree order
+    idx = match(x$ID, ids)
+    idx[x$LOOP_BREAKERS[, "copy"]] = idx[x$LOOP_BREAKERS[, "orig"]]
+    aff = aff[idx]
+    liability = liability[idx]
+  }
 
   peel_MD = function(dat, nuc) .peel_MM_AUT(dat, nuc, rho = rho)
   peel0 = function(dat, nuc) .peel_MM_AUT(dat, nuc, rho = 0.5)
-  peelOrder = peelingOrder(x)
+  peelOrder = pedprobr:::.peelOrder(x)
 
   peelProcess = pedprobr:::peelingProcess
 

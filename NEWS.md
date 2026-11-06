@@ -1,3 +1,10 @@
+# paramlink2 1.0.7
+
+* Improved loop breaking using **pedtools** (>= 2.11.0), including support for founder and repeated loop breakers.
+* Fixed forwarding of user-supplied MERLIN options.
+* Minor bug fixes and improvements.
+
+
 # paramlink2 1.0.6
 
 Maintenance release with only minor changes to the package documentation.

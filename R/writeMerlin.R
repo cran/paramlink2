@@ -86,7 +86,7 @@
 
   col3 = character(L)
   allfreqs = unlist(lapply(x$MARKERS, afreq))
-  col3[-cum] = format(allfreqs, scientifit = FALSE, digits = 6)
+  col3[-cum] = format(allfreqs, scientific = FALSE, digits = 6)
 
   freqmatr = cbind(col1, col2, col3)
   write.table(freqmatr, file = fnames[["freq"]], col.names = FALSE, row.names = FALSE, quote = FALSE)

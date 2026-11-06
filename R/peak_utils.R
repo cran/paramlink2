@@ -2,15 +2,15 @@
 #'
 #' Identify and summarise LOD score peaks.
 #'
-#' A peak is defined as a run of at least `width` consecutive markers with LOD
-#' score above or equal to `threshold`. If possible, one flanking marker is
-#' included on each side of the peak.
+#' A peak is defined as a run of at least `width` consecutive markers with LOD score above
+#' or equal to `threshold`. If possible, one flanking marker is included on each side of
+#' the peak.
 #'
 #' @param x A [linkres] object, or data frame with columns `CHROM`, `MB`, `LOD`.
-#' @param threshold A single number
-#' @param width A positive integer
-#' @param physmap A matrix or data frame with three columns: Marker
-#'   name, chromosome and physical position.
+#' @param threshold A single number.
+#' @param width A positive integer.
+#' @param physmap A matrix or data frame with three columns: Marker name, chromosome and
+#'   physical position.
 #'
 #' @return A list of data frames.
 #'
@@ -108,7 +108,7 @@ peakSummary = function(x, threshold, width = 1, physmap = NULL) {
       from_bp = physmap[match(a$FROM, physmap[, 1]), 3]
       to_bp = physmap[match(a$TO, physmap[, 1]), 3]
       a = cbind(a, FROM_BP = from_bp, TO_BP = to_bp)
-      a = a[, c(1:5, 12:13, 6:11)]
+      a = a[, c(1:5, 10:11, 6:9)]
     }
   }
   a

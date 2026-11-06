@@ -18,13 +18,12 @@ supported (the latter requires
 includes tools for visualising LOD scores and summarising peaks for use
 in downstream analysis.
 
-**paramlink2** is part of the
-[pedsuite](https://magnusdv.github.io/pedsuite/) collection of packages
-for pedigree analysis in R, featured in the book [Pedigree Analysis in
-R](https://magnusdv.github.io/pedsuite/articles/web_only/publications.html)
-(Vigeland, 2021). Chapter 9 of this book gives an introduction to
-linkage analysis, and includes a detailed worked example using
-**paramlink2**.
+**paramlink2** is part of the [pedsuite](https://pedsuite.org/)
+collection of packages for pedigree analysis in R, featured in the book
+[Pedigree Analysis in
+R](https://pedsuite.org/articles/web_only/publications.html) (Vigeland,
+2021). Chapter 9 of this book gives an introduction to linkage analysis,
+and includes a detailed worked example using **paramlink2**.
 
 As the package name suggests, **paramlink2** is a reimplementation of
 [paramlink](https://CRAN.R-project.org/package=paramlink), which is no
@@ -43,8 +42,7 @@ install.packages("paramlink2")
 Alternatively, get the latest development version from GitHub:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("magnusdv/paramlink2")
+remotes::install_github("magnusdv/paramlink2")
 ```
 
 ## An example
@@ -60,7 +58,7 @@ at 248 SNP markers on chromosome 1. We will perform parametric linkage
 analysis on the dataset, hoping to identify a genomic region linked to
 the disease locus.
 
-<img src="man/figures/README-dominant1Ped-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="man/figures/README-dominant1Ped-1.png" alt="" width="80%" style="display: block; margin: auto;" />
 
 The dataset contains three elements: `ped`, `aff` and `map`. For
 simplicity we store these in separate variables:
@@ -115,7 +113,7 @@ Furthermore, `plot()` produces a nice graph of the LOD scores:
 plot(lods)
 ```
 
-<img src="man/figures/README-singleLodGraph-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-singleLodGraph-1.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 As typical for singlepoint scores, the graph is quite noisy and not easy
 to interpret, although we see indications of a peak. A cleaner picture
@@ -138,7 +136,7 @@ points(lodsM, col = 2)
 legend("topright", c("Multi", "Single"), col = c(2, 8), lwd = 2)
 ```
 
-<img src="man/figures/README-multiLodGraph-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-multiLodGraph-1.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 This graph shows a convincing peak of LOD = 3, which is close to the
 traditional significance threshold LOD = 3.3 for AD disorders. We print

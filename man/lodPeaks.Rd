@@ -12,12 +12,12 @@ peakSummary(x, threshold, width = 1, physmap = NULL)
 \arguments{
 \item{x}{A \link{linkres} object, or data frame with columns \code{CHROM}, \code{MB}, \code{LOD}.}
 
-\item{threshold}{A single number}
+\item{threshold}{A single number.}
 
-\item{width}{A positive integer}
+\item{width}{A positive integer.}
 
-\item{physmap}{A matrix or data frame with three columns: Marker
-name, chromosome and physical position.}
+\item{physmap}{A matrix or data frame with three columns: Marker name, chromosome and
+physical position.}
 }
 \value{
 A list of data frames.
@@ -26,9 +26,9 @@ A list of data frames.
 Identify and summarise LOD score peaks.
 }
 \details{
-A peak is defined as a run of at least \code{width} consecutive markers with LOD
-score above or equal to \code{threshold}. If possible, one flanking marker is
-included on each side of the peak.
+A peak is defined as a run of at least \code{width} consecutive markers with LOD score above
+or equal to \code{threshold}. If possible, one flanking marker is included on each side of
+the peak.
 }
 \examples{
 
